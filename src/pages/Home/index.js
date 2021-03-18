@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, View } from 'react-native';
+import { Title } from './styles';
 
 export default function Home({ navigation }) {
     function navigateToProfile() {
@@ -8,7 +9,7 @@ export default function Home({ navigation }) {
 
     return (
         <View>
-            <Text>Home Page</Text>
+            <Title>Home Page</Title>
             <Button title="Ir para o Profile" onPress={navigateToProfile} />
         </View>
     );
