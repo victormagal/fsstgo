@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import Routes from './routes';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function src() {
+export default function mainNav() {
     return (
-        <View>
-            <Text>Olá enfermeira</Text>
-        </View>
+        <NavigationContainer>
+            <Routes />
+        </NavigationContainer>
     );
 }
