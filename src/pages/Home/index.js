@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { Title } from './styles';
 
 export default function Home({ navigation }) {
@@ -10,7 +10,18 @@ export default function Home({ navigation }) {
     return (
         <View>
             <Title>Home Page</Title>
-            <Button title="Ir para o Profile" onPress={navigateToProfile} />
+            <TouchableOpacity>
+                <Text>Eventos</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>Biblioteca</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>Video Aulas</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>Meus ingressos</Text>
+            </TouchableOpacity>
         </View>
     );
 }
