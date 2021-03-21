@@ -38,14 +38,12 @@ export default function Home({ navigation }) {
 
     return (
         <View>
-            {/* {cards.map(card => (
+            {cards.map(card => (
                 <Card key={card.id}>
                     <Label>{card.label}</Label>
                     {card.icon}
                 </Card>
-            ))} */}
-            <Text>Home</Text>
-            <Button title="Ir para a Profile" onPress={navigateToProfile} />
+            ))}
         </View>
     );
 }
