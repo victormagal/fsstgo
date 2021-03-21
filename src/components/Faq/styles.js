@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
 export const Answer = styled.Text`
+    font-family: 'WorkSans-Regular';
     font-size: 12px;
-    font-weight: 400;
     line-height: 21px;
     color: #333;
 `;
@@ -12,8 +12,8 @@ export const BoxAnswer = styled.View`
 `;
 
 export const Question = styled.Text`
+    font-family: 'WorkSans-SemiBold';
     font-size: 14px;
-    font-weight: 600;
     line-height: 21px;
     color: #333;
 `;
