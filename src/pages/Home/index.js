@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { Card, Label } from './styles';
 
 // SVG Icons used on this page
@@ -15,22 +15,22 @@ export default function Home({ navigation }) {
 
     const cards = [
         {
-            id: 1,
+            id: '1',
             label: 'Eventos',
             icon: <EventSVG width={60} height={60} />
         },
         {
-            id: 2,
+            id: '2',
             label: 'Biblioteca',
             icon: <BookSVG width={60} height={60} />
         },
         {
-            id: 3,
+            id: '3',
             label: 'Video Aulas',
             icon: <VideoSVG width={60} height={60} />
         },
         {
-            id: 4,
+            id: '4',
             label: 'Meus ingressos',
             icon: <TicketSVG width={60} height={60} />
         }
@@ -38,12 +38,14 @@ export default function Home({ navigation }) {
 
     return (
         <View>
-            {cards.map(card => (
+            {/* {cards.map(card => (
                 <Card key={card.id}>
                     <Label>{card.label}</Label>
                     {card.icon}
                 </Card>
-            ))}
+            ))} */}
+            <Text>Home</Text>
+            <Button title="Ir para a Profile" onPress={navigateToProfile} />
         </View>
     );
 }

@@ -10,7 +10,7 @@ export default function Routes() {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Profile" component={Profile} />
+            {/* <Stack.Screen name="Profile" component={Profile} /> */}
         </Stack.Navigator>
     );
 }
