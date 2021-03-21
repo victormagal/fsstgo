@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
 import { Container, CustomButton, Email, Label, Logout, LogoutButton, Name, Notifications, Section, SectionName, TextNotifications, TipNotifications, Title, Version } from './styles';
 
 // SVG Icons used on this component
