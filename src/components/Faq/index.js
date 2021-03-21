@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native';
 import { Answer, BoxAnswer, Question, Tip } from './styles';
 
-// SVG Icons
+// SVG Icons used on this page
 import ArrowSVG from '../../assets/svg/keyboard_arrow.svg';
 
 export default function FaqComponent({doubts}) {
@@ -17,7 +17,7 @@ export default function FaqComponent({doubts}) {
         <ScrollView>
             {doubts.map((doubt, index) => (
                 <Tip>
-                    <TouchableOpacity key={doubt.id} onPress={() => showAnswer(index)}>
+                    <TouchableOpacity key={index} onPress={() => showAnswer(index)}>
                         <Question>{doubt.question}</Question>
                         <ArrowSVG width={15} height={10} />
                     </TouchableOpacity>
