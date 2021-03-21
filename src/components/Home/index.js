@@ -1,13 +1,15 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { Card, Label } from './styles';
+import { BoxLabel, Card, Label } from './styles';
 
 export default function HomeComponent({cards}) {
     return (
-        <ScrollView>
+        <ScrollView style={{ backgroundColor: 'white' }}>
             {cards.map((card, index) => (
-                <Card key={index}>
-                    <Label>{card.label}</Label>
+                <Card key={index} bgColor={card.backgroundColor}>
+                    <BoxLabel>
+                        <Label>{card.label}</Label>
+                    </BoxLabel>
                     {card.icon}
                 </Card>
             ))}
