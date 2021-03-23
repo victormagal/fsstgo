@@ -6,16 +6,18 @@ export default function FaqComponent({doubts}) {
     const [item, setItem] = useState({});
 
     const showAnswer = index => {
-        // console.log(!item[index]);
         setItem({...item, [index]:!item[index]});
     }
 
     return (
         <ScrollView>
             {doubts.map((doubt, index) => (
-                <Tip>
-                    <TouchableOpacity key={doubt.id} onPress={() => showAnswer(index)}>
+                <Tip key={index}>
+                    <TouchableOpacity onPress={() => showAnswer(index)}>
                         <Question>{doubt.question}</Question>
+                        <View>
+
+                        </View>
                     </TouchableOpacity>
                     <BoxAnswer>
                         {item[index] && <Answer>{doubt.answer}</Answer>}
