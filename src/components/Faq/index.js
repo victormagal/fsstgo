@@ -9,17 +9,15 @@ export default function FaqComponent({doubts}) {
     const [item, setItem] = useState({});
 
     const showAnswer = index => {
-        // console.log(!item[index]);
         setItem({...item, [index]:!item[index]});
     }
 
     return (
         <ScrollView>
             {doubts.map((doubt, index) => (
-                <Tip>
-                    <TouchableOpacity key={index} onPress={() => showAnswer(index)}>
+                <Tip key={index}>
+                    <TouchableOpacity onPress={() => showAnswer(index)}>
                         <Question>{doubt.question}</Question>
-                        <ArrowSVG width={15} height={10} />
                     </TouchableOpacity>
                     <BoxAnswer>
                         {item[index] && <Answer>{doubt.answer}</Answer>}
