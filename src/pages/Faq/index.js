@@ -1,5 +1,7 @@
 import React from 'react';
+import { ScrollView } from 'react-native-gesture-handler';
 import FaqComponent from '../../components/Faq';
+import Accordeon from '../../components/Shared/Accordeon';
 
 export default function Faq() {
     const doubts = [
@@ -17,5 +19,10 @@ export default function Faq() {
         }
     ];
 
-    return <FaqComponent doubts={doubts} />;
+    return (
+        <ScrollView style={{ backgroundColor: 'white' }}>
+            <Accordeon doubts={doubts} />    
+            <FaqComponent />
+        </ScrollView>
+    );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollView } from 'react-native-gesture-handler';
 import HomeComponent from '../../components/Home';
 
 // SVG Icons used on this page
@@ -31,5 +32,9 @@ export default function Home() {
         }
     ];
 
-    return <HomeComponent cards={cards} />;
+    return (
+        <ScrollView style={{ backgroundColor: 'white' }}>
+            <HomeComponent cards={cards} />       
+        </ScrollView>
+    );
 }

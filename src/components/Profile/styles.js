@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.ScrollView`
-    padding: 0 14px;
-    background-color: white;
+// Container that wrappes all elements in the component
+export const Container = styled.View`
+    padding: 0 15px;
 `;
 
 // Button inside each section will send customer to another page

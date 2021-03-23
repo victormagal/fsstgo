@@ -1,10 +1,10 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { BoxLabel, Card, Label } from './styles';
 
 export default function HomeComponent({cards}) {
     return (
-        <ScrollView style={{ backgroundColor: 'white' }}>
+        <View>
             {cards.map((card, index) => (
                 <Card key={index} bgColor={card.backgroundColor}>
                     <BoxLabel>
@@ -13,6 +13,6 @@ export default function HomeComponent({cards}) {
                     {card.icon}
                 </Card>
             ))}
-        </ScrollView>
+        </View>
     );
 }
