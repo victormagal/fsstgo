@@ -15,10 +15,10 @@ export default function Routes() {
         <Stack.Navigator>
             {/* <Stack.Screen name="Home" component={Home} /> */}
             {/* <Stack.Screen name="Profile" component={Profile} /> */}
-            {/* <Stack.Screen name="Faq" component={Faq} /> */}
+            <Stack.Screen name="Faq" component={Faq} />
             {/* <Stack.Screen name="Notificações" component={Notifications} /> */}
             {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
-            <Stack.Screen name="Biblioteca" component={Library} />
+            {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
         </Stack.Navigator>
     );
 }

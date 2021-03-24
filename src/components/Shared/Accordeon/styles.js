@@ -30,9 +30,14 @@ export const HeaderTitle = styled.View`
 
 // Text style for the subtitle
 export const Subtitle = styled.Text`
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     font-family: 'WorkSans-SemiBold';
     font-size: 18px;
     color: #373a42;
+    margin-right: 10px;
 `;
 
 // Container that fits everything inside itself

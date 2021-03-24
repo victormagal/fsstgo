@@ -40,7 +40,11 @@ export const Thumb = styled.Image`
 export const Summary = styled.View`
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     justify-content: center;
+    padding: 0 10px;
 `;
 
 // Text style of the title

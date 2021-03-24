@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import VideoClassComponent from '../../components/VideoClass';
 
 export default function VideoClass() {
-    const content = [
+    const data = [
         {
             title: 'Video aula 1',
             description: 'Descrição referente a video aula 1'
@@ -32,7 +32,7 @@ export default function VideoClass() {
 
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
-            <VideoClassComponent videoclasses={content} />
+            <VideoClassComponent videoclasses={data} />
         </ScrollView>
     );
 }

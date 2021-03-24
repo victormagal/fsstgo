@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { Description, HeaderTitle, HeaderTip, Subtitle, Tip, Title } from './styles';
 
 // SVG Icons used on this page
