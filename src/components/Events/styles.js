@@ -11,6 +11,9 @@ export const BoxDescription = styled.View`
     margin-left: 15px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     justify-content: space-between;
 `;
 
