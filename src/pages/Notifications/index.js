@@ -1,22 +1,28 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import FaqComponent from '../../components/Faq';
 import Accordeon from '../../components/Shared/Accordeon';
 
-export default function Faq() {
+export default function Notifications() {
     const notes = [
         {
+            title: 'Não lidas',
             itens: [
                 {
-                    subtitle: 'Question number 1',
+                    subtitle: 'Mudança de horário do evento na praia 2019',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                 },
                 {
-                    subtitle: 'Question number 2',
+                    subtitle: 'Seu ingresso para o na praia 2019 foi confirmado e já estea disponível',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                },
+                }
+            ]
+        },
+        {
+            title: 'Lidas',
+            itens: [
                 {
-                    subtitle: 'Question number 3',
+                    subtitle: 'Sua senha foi atualzada com sucesso!',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                 }
             ]
@@ -25,8 +31,7 @@ export default function Faq() {
 
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
-            <Accordeon notes={notes} />    
-            <FaqComponent />
+            <Accordeon notes={notes} />
         </ScrollView>
     );
 }

@@ -6,6 +6,7 @@ export const BoxContactUs = styled.TouchableOpacity`
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 40px;
 `;
 
 // Text style for the label
