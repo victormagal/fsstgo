@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Faq from './pages/Faq';
 import Notifications from './pages/Notifications';
 import VideoClass from './pages/VideoClass';
+import Library from './pages/Library';
 
 export default function Routes() {
     return (
@@ -16,7 +17,8 @@ export default function Routes() {
             {/* <Stack.Screen name="Profile" component={Profile} /> */}
             {/* <Stack.Screen name="Faq" component={Faq} /> */}
             {/* <Stack.Screen name="Notificações" component={Notifications} /> */}
-            <Stack.Screen name="Video Aulas" component={VideoClass} />
+            {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
+            <Stack.Screen name="Biblioteca" component={Library} />
         </Stack.Navigator>
     );
 }
