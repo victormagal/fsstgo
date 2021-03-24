@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Faq from './pages/Faq';
 import Notifications from './pages/Notifications';
 import VideoClass from './pages/VideoClass';
+import Events from './pages/Events';
 import Library from './pages/Library';
 
 export default function Routes() {
@@ -15,10 +16,11 @@ export default function Routes() {
         <Stack.Navigator>
             {/* <Stack.Screen name="Home" component={Home} /> */}
             {/* <Stack.Screen name="Profile" component={Profile} /> */}
-            <Stack.Screen name="Faq" component={Faq} />
+            {/* <Stack.Screen name="Faq" component={Faq} /> */}
             {/* <Stack.Screen name="Notificações" component={Notifications} /> */}
             {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
-            {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
+            {/* <Stack.Screen name="Eventos" component={Events} /> */}
+            <Stack.Screen name="Biblioteca" component={Library} />
         </Stack.Navigator>
     );
 }
