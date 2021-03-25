@@ -22,8 +22,8 @@ export default function AccordeonComponent({notes}) {
                             <Title>{note.title}</Title>
                         </HeaderTitle>
                     }
-                    {note.itens.map((item) => (
-                        <Tip>
+                    {note.itens.map((item, index) => (
+                        <Tip key={index}>
                             <HeaderTip onPress={() => showAnswer(index)}>
                                 <Subtitle>{item.subtitle}</Subtitle>
                                 <ArrowSVG width={20} height={15} />

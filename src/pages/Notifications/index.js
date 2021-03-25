@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Accordeon from '../../components/Shared/Accordeon';
 
