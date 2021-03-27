@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
@@ -13,16 +13,16 @@ import Library from './pages/Library';
 import MyEvents from './pages/MyEvents';
 
 export default function Routes() {
-    return (
-        <Stack.Navigator>
-            {/* <Stack.Screen name="Home" component={Home} /> */}
-            {/* <Stack.Screen name="Profile" component={Profile} /> */}
-            {/* <Stack.Screen name="Faq" component={Faq} /> */}
-            {/* <Stack.Screen name="Notificações" component={Notifications} /> */}
-            {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
-            {/* <Stack.Screen name="Eventos" component={Events} /> */}
-            {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
-            <Stack.Screen name="Meus eventos" component={MyEvents} />
-        </Stack.Navigator>
-    );
+  return (
+    <Stack.Navigator>
+      {/* <Stack.Screen name="Home" component={Home} /> */}
+      {/* <Stack.Screen name="Profile" component={Profile} /> */}
+      {/* <Stack.Screen name="Faq" component={Faq} /> */}
+      {/* <Stack.Screen name="Notificações" component={Notifications} /> */}
+      {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
+      {/* <Stack.Screen name="Eventos" component={Events} /> */}
+      {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
+      <Stack.Screen name="Meus eventos" component={MyEvents} />
+    </Stack.Navigator>
+  );
 }
