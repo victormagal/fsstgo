@@ -12,12 +12,13 @@ import VideoClass from './pages/VideoClass';
 import Events from './pages/Events';
 import Library from './pages/Library';
 import MyEvents from './pages/MyEvents';
+import Event from './pages/Event';
 
 const Stack = createStackNavigator();
 
 export default function Routes({ navigation }) {
     return (
-        <Stack.Navigator initialRouteName='Home' screenOptions={{
+        <Stack.Navigator initialRouteName='Event' screenOptions={{
             headerStyle: {
                 backgroundColor: '#51AF97',
                 borderBottomLeftRadius: 10,
@@ -43,6 +44,7 @@ export default function Routes({ navigation }) {
             <Stack.Screen name="Events" component={Events} options={{ title: 'Eventos' }} />
             <Stack.Screen name="Library" component={Library} options={{ title: 'Biblioteca' }} />
             <Stack.Screen name="MyEvents" component={MyEvents} options={{ title: 'Meus eventos' }} />
+            <Stack.Screen name="Event" component={Event} options={{ title: 'Campus Party' }} />
         </Stack.Navigator>
     );
 }
