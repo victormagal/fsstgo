@@ -18,7 +18,7 @@ const Stack = createStackNavigator();
 
 export default function Routes({ navigation }) {
     return (
-        <Stack.Navigator initialRouteName='Event' screenOptions={{
+        <Stack.Navigator initialRouteName='Home' screenOptions={{
             headerStyle: {
                 backgroundColor: '#51AF97',
                 borderBottomLeftRadius: 10,
@@ -31,7 +31,7 @@ export default function Routes({ navigation }) {
                 textAlign: 'center'
             },
             headerRight: () => (
-                <TouchableOpacity style={{ marginRight: 16 }} onPress={() => navigation.navigate('Profile')}>
+                <TouchableOpacity style={{ marginRight: 16 }} onPress={() => { navigation.navigate('Profile') }}>
                     <ProfileSvg width={25} height={25} />
                 </TouchableOpacity>
             )
