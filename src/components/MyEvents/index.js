@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { BackgroundImage, Card, CheckIn, Info, Label, Price, PriceBox, Title } from './styles';
 
-import CheckSVG from '../../assets/svg/check-in.svg';
+import CheckSVG from '../../assets/svg/check_in.svg';
 import TicketSVG from '../../assets/svg/ticket_events.svg';
 
 export default function MyEventsComponent({ cards }) {
