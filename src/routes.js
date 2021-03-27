@@ -3,14 +3,16 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Faq from './pages/Faq';
-import Notifications from './pages/Notifications';
-import VideoClass from './pages/VideoClass';
-import Events from './pages/Events';
-import Library from './pages/Library';
-import MyEvents from './pages/MyEvents';
+// import Home from './pages/Home';
+// import Profile from './pages/Profile';
+// import Faq from './pages/Faq';
+// import Notifications from './pages/Notifications';
+// import VideoClass from './pages/VideoClass';
+// import Events from './pages/Events';
+// import Library from './pages/Library';
+// import MyEvents from './pages/MyEvents';
+import Login from './pages/Login';
+import NewAccount from './pages/NewAccount';
 
 export default function Routes() {
   return (
@@ -22,7 +24,15 @@ export default function Routes() {
       {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
       {/* <Stack.Screen name="Eventos" component={Events} /> */}
       {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
-      <Stack.Screen name="Meus eventos" component={MyEvents} />
+      {/* <Stack.Screen name="Meus eventos" component={MyEvents} /> */}
+      {/* <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      /> */}
+      <Stack.Screen name="NewAccount" component={NewAccount} />
     </Stack.Navigator>
   );
 }
