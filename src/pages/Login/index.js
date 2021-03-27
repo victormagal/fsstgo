@@ -8,14 +8,14 @@ import {
   Text,
 } from 'react-native';
 
+import Logo from '../../assets/svg/logo.svg';
 import styles from './styles';
 
 export default function Login() {
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
-        {/* TODO: arrumar img telalogin */}
-        {/* <Image source={require('../../assets/img/logo.png')} /> */}
+        <Logo />
       </View>
 
       <View style={styles.container}>

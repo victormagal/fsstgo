@@ -11,6 +11,7 @@ import VideoClass from './pages/VideoClass';
 import Events from './pages/Events';
 import Library from './pages/Library';
 import MyEvents from './pages/MyEvents';
+import Login from './pages/Login';
 
 export default function Routes() {
   return (
@@ -22,7 +23,14 @@ export default function Routes() {
       {/* <Stack.Screen name="Video Aulas" component={VideoClass} /> */}
       {/* <Stack.Screen name="Eventos" component={Events} /> */}
       {/* <Stack.Screen name="Biblioteca" component={Library} /> */}
-      <Stack.Screen name="Meus eventos" component={MyEvents} />
+      {/* <Stack.Screen name="Meus eventos" component={MyEvents} /> */}
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack.Navigator>
   );
 }
