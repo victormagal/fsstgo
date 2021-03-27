@@ -11,7 +11,11 @@ import Login from './pages/Login';
 export default function Routes() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
       {/* <Stack.Screen name="Home" component={Home} /> */}
       {/* <Stack.Screen name="Profile" component={Profile} /> */}
       {/* <Stack.Screen name="Faq" component={Faq} /> */}

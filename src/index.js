@@ -1,11 +1,17 @@
 import React from 'react';
 import Routes from './routes';
-import { NavigationContainer } from '@react-navigation/native';
+import {StatusBar} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 export default function mainNav() {
-    return (
-        <NavigationContainer>
-            <Routes />
-        </NavigationContainer>
-    );
+  return (
+    <NavigationContainer>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent={true}
+      />
+      <Routes />
+    </NavigationContainer>
+  );
 }
