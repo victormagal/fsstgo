@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View,
   KeyboardAvoidingView,
-  Image,
+  // Image,
   TextInput,
   TouchableOpacity,
   Text,
@@ -14,7 +14,8 @@ export default function Login() {
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
-        <Image source={require('../../assets/img/logo.png')} />
+        {/* TODO: arrumar img telalogin */}
+        {/* <Image source={require('../../assets/img/logo.png')} /> */}
       </View>
 
       <View style={styles.container}>
@@ -32,9 +33,11 @@ export default function Login() {
           onChangeText={() => {}}
         />
 
-        <TouchableOpacity style={styles.btnKey}>
-          <Text style={styles.keyText}>Esqueci minha senha</Text>
-        </TouchableOpacity>
+        <View style={styles.txtMyKey}>
+          <TouchableOpacity style={styles.btnKey}>
+            <Text style={styles.keyText}>Esqueci minha senha</Text>
+          </TouchableOpacity>
+        </View>
 
         <TouchableOpacity style={styles.btnSubmit}>
           <Text style={styles.submitText}>Entrar</Text>

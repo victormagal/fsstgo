@@ -16,12 +16,14 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    width: '90%',
+    width: '100%',
     paddingBottom: 50,
+    paddingRight: 30,
+    paddingLeft: 30,
   },
   input: {
     backgroundColor: '#FFFFFF',
-    width: '90%',
+    width: '100%',
     marginBottom: 15,
     color: '#868E96',
     fontSize: 17,
@@ -30,7 +32,7 @@ export default StyleSheet.create({
   },
   btnSubmit: {
     backgroundColor: '#233568',
-    width: '90%',
+    width: '100%',
     height: 45,
     alignItems: 'center',
     justifyContent: 'center',
@@ -41,8 +43,14 @@ export default StyleSheet.create({
     color: '#F8F8F8',
     fontSize: 18,
   },
+  txtMyKey: {
+    width: '100%',
+    alignItems: 'flex-end',
+  },
   btnKey: {
-    marginTop: 10,
+    color: '#868E96',
+    borderBottomWidth: 1,
+    borderBottomColor: '#868E96',
   },
   keyText: {
     color: '#868E96',
