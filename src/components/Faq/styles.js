@@ -1,29 +1,24 @@
 import styled from 'styled-components/native';
 
-// Text style for the answers
-export const Answer = styled.Text`
-    font-family: 'WorkSans-Regular';
-    font-size: 12px;
-    line-height: 21px;
-    color: #333;
+// Parent container to contact us
+export const BoxContactUs = styled.TouchableOpacity`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
 `;
 
-// Parent container of the answer
-export const BoxAnswer = styled.View`
-    margin-top: 14px;
-`;
-
-// Text style for the questions
-export const Question = styled.Text`
+// Text style for the label
+export const Label = styled.Text`
     font-family: 'WorkSans-SemiBold';
-    font-size: 14px;
-    line-height: 21px;
-    color: #333;
+    font-size: 20px;
+    color: #373a42;
 `;
 
-// Container that fits everything in the component
-export const Tip = styled.View`
-    border-bottom-width: 1px;
-    border-bottom-color: #efefef;
-    padding: 24px;
+// Text style for the link
+export const Link = styled.Text`
+    font-family: 'WorkSans-SemiBold';
+    font-size: 20px;
+    color: #3e74ff;
 `;
