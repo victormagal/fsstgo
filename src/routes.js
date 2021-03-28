@@ -1,6 +1,6 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { TouchableOpacity } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import ProfileSvg from './assets/svg/profile_icon.svg';
 
@@ -16,7 +16,7 @@ import Event from './pages/Event';
 
 const Stack = createStackNavigator();
 
-export default function Routes({navigation}) {
+export default function Routes({ navigation }) {
   return (
     <Stack.Navigator
       initialRouteName="Home"
@@ -34,54 +34,54 @@ export default function Routes({navigation}) {
         },
         headerRight: () => (
           <TouchableOpacity
-            style={{marginRight: 16}}
+            style={{ marginRight: 16 }}
             onPress={() => {
               navigation.navigate('Profile');
             }}>
             <ProfileSvg width={25} height={25} />
           </TouchableOpacity>
-        ),,
+        ),
       }}>
-      <Stack.Screen name="Home" component={Home} options={{title: 'Inicial'}} />
+      <Stack.Screen name="Home" component={Home} options={{ title: 'Inicial' }} />
       <Stack.Screen
         name="Profile"
         component={Profile}
-        options={{title: 'Perfil'}}
+        options={{ title: 'Perfil' }}
       />
       <Stack.Screen
         name="Faq"
         component={Faq}
-        options={{title: 'Perguntas Frequentes'}}
+        options={{ title: 'Perguntas Frequentes' }}
       />
       <Stack.Screen
         name="Notifications"
         component={Notifications}
-        options={{title: 'Notificações'}}
+        options={{ title: 'Notificações' }}
       />
       <Stack.Screen
         name="VideoClass"
         component={VideoClass}
-        options={{title: 'Video aulas'}}
+        options={{ title: 'Video aulas' }}
       />
       <Stack.Screen
         name="Events"
         component={Events}
-        options={{title: 'Eventos'}}
+        options={{ title: 'Eventos' }}
       />
       <Stack.Screen
         name="Library"
         component={Library}
-        options={{title: 'Biblioteca'}}
+        options={{ title: 'Biblioteca' }}
       />
       <Stack.Screen
         name="MyEvents"
         component={MyEvents}
-        options={{title: 'Meus eventos'}}
+        options={{ title: 'Meus eventos' }}
       />
       <Stack.Screen
         name="Event"
         component={Event}
-        options={{title: 'Campus Party'}}
+        options={{ title: 'Campus Party' }}
       />
     </Stack.Navigator>
   );
