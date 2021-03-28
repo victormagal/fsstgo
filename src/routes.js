@@ -24,13 +24,13 @@ export default function Routes({ navigation }) {
         headerStyle: {
           backgroundColor: '#51AF97',
           borderBottomLeftRadius: 10,
-          borderBottomRightRadius: 10,,
+          borderBottomRightRadius: 10
         },
         headerTintColor: 'white',
         headerTitleStyle: {
           fontFamily: 'WorkSans-Bold',
           fontSize: 22,
-          textAlign: 'center',,
+          textAlign: 'center'
         },
         headerRight: () => (
           <TouchableOpacity
