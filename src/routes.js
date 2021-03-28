@@ -16,9 +16,9 @@ import Event from './pages/Event';
 
 const Stack = createStackNavigator();
 
-export default function Routes({ navigation }) {
+export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home' screenOptions={{
+        <Stack.Navigator initialRouteName='Profile' screenOptions={{
             headerStyle: {
                 backgroundColor: '#51AF97',
                 borderBottomLeftRadius: 10,
@@ -31,7 +31,7 @@ export default function Routes({ navigation }) {
                 textAlign: 'center'
             },
             headerRight: () => (
-                <TouchableOpacity style={{ marginRight: 16 }} onPress={() => { navigation.navigate('Profile') }}>
+                <TouchableOpacity style={{ marginRight: 16 }} onPress={() => console.log('olá enfermeira') }>
                     <ProfileSvg width={25} height={25} />
                 </TouchableOpacity>
             )
