@@ -18,7 +18,7 @@ const Stack = createStackNavigator();
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Profile' screenOptions={{
+        <Stack.Navigator initialRouteName='Home' screenOptions={{
             headerStyle: {
                 backgroundColor: '#51AF97',
                 borderBottomLeftRadius: 10,

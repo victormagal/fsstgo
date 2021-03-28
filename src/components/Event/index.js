@@ -1,10 +1,11 @@
 import React from 'react';
 import { Body, Section, HeaderSection, IconHeader, TitleBody, MiddleSection, SubtitleBody, TextBody, ReadMoreBox, ReadMoreText, List, ImageGallery, BoxFile, TitleFile, MapImage, BoxSpeaker, ImageSpeaker, InfoSpeaker, NameSpeaker, RuleSpeaker, ApplySection, ApplyBox, ApplyText, ApplyButton, TextApplyButton, Summary, SummaryTitle, InfosSummary, TextInfosSummary, SummarySubtitle, SummaryLabel } from './styles';
+import { View } from 'react-native';
 
 import DateSVG from '../../assets/svg/date_events.svg';
 import LocationSVG from '../../assets/svg/location_events.svg';
 import TicketSVG from '../../assets/svg/ticket_events.svg';
-import NotificationSVG from '../../assets/svg/notification_event.svg';
+import NotificationSVG from '../../assets/svg/notification_events.svg';
 import DownloadSVG from '../../assets/svg/download_file_event.svg';
 
 export default function EventComponent() {
@@ -51,20 +52,20 @@ export default function EventComponent() {
             <Summary>
                 <SummaryTitle>Olá enfermeira</SummaryTitle>
                 <InfosSummary>
-                    <DateSVG width={20} height={20} />
+                    <DateSVG width={15} height={15} />
                     <TextInfosSummary>
                         <SummarySubtitle>27/11/2021 - das 18h as 22hrs</SummarySubtitle>
                     </TextInfosSummary>
                 </InfosSummary>
                 <InfosSummary>
-                    <LocationSVG width={20} height={20} />
+                    <LocationSVG width={15} height={15} />
                     <TextInfosSummary>
                         <SummarySubtitle>Auditório FIEG/SESI</SummarySubtitle>
                         <SummaryLabel>Rua Araguaia, 1544 Setor Vila Nova</SummaryLabel>
                     </TextInfosSummary>
                 </InfosSummary>
                 <InfosSummary>
-                    <TicketSVG width={20} height={20} />
+                    <TicketSVG width={15} height={15} />
                     <TextInfosSummary>
                         <SummarySubtitle>Gratuito</SummarySubtitle>
                     </TextInfosSummary>
@@ -83,8 +84,17 @@ export default function EventComponent() {
                 <Section>
                     <HeaderSection>
                         <TitleBody>Atualizações</TitleBody>
-                        <IconHeader>
-                            <NotificationSVG width={20} height={20} />
+                        <IconHeader style={{
+                            shadowColor: 'black',
+                            shadowOffset: {
+                                width: 0,
+                                height: 3
+                            },
+                            shadowOpacity: 0.25,
+                            shadowRadius: 3,
+                            elevation: 3
+                        }}>
+                            <NotificationSVG width={15} height={15} />
                         </IconHeader>
                     </HeaderSection>
                     <MiddleSection>
@@ -108,7 +118,26 @@ export default function EventComponent() {
                             renderItem={({ item }) => {
                                 let url = item.url;
                                 return (
-                                    <ImageGallery source={{ uri: url }} />
+                                    <View
+                                        style={{
+                                            width: 300,
+                                            height: 150,
+                                            borderRadius: 10,
+                                            marginTop: 5,
+                                            marginLeft: 16,
+                                            marginBottom: 20,
+                                            shadowColor: 'black',
+                                            shadowOffset: {
+                                                width: 0,
+                                                height: 0
+                                            },
+                                            shadowOpacity: 0.25,
+                                            shadowRadius: 5,
+                                            elevation: 10
+                                        }}
+                                    >
+                                        <ImageGallery source={{ uri: url }} />
+                                    </View>
                                 );
                             }}
                         />
@@ -129,7 +158,16 @@ export default function EventComponent() {
                             showsHorizontalScrollIndicator={false}
                             renderItem={({ item }) => {
                                 return (
-                                    <BoxFile>
+                                    <BoxFile style={{
+                                        shadowColor: 'black',
+                                        shadowOffset: {
+                                            width: 0,
+                                            height: 0
+                                        },
+                                        shadowOpacity: 0.25,
+                                        shadowRadius: 5,
+                                        elevation: 10
+                                    }}>
                                         <DownloadSVG />
                                         <TitleFile>{item.title}</TitleFile>
                                     </BoxFile>
