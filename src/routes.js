@@ -14,29 +14,24 @@ import Library from './pages/Library';
 import MyEvents from './pages/MyEvents';
 import Event from './pages/Event';
 
+import HeaderComponent from './components/Shared/Header';
+
 const Stack = createStackNavigator();
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home' screenOptions={{
-            headerStyle: {
-                backgroundColor: '#51AF97',
-                borderBottomLeftRadius: 10,
-                borderBottomRightRadius: 10
-            },
-            headerTintColor: 'white',
-            headerTitleStyle: {
-                fontFamily: 'WorkSans-Bold',
-                fontSize: 22,
-                textAlign: 'center'
-            },
-            headerRight: () => (
-                <TouchableOpacity style={{ marginRight: 16 }} onPress={() => console.log('olá enfermeira') }>
-                    <ProfileSvg width={25} height={25} />
-                </TouchableOpacity>
-            )
-        }}>
-            <Stack.Screen name="Home" component={Home} options={{ title: 'Inicial' }} />
+        <Stack.Navigator initialRouteName='Home'
+          screenOptions={({navigation}) => ({
+            header: () => <HeaderComponent navigation={navigation} />
+          })}
+        >
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{
+                title: 'Inicial'
+              }}
+            />
             <Stack.Screen name="Profile" component={Profile} options={{ title: 'Perfil' }} />
             <Stack.Screen name="Faq" component={Faq} options={{ title: 'Perguntas Frequentes' }} />
             <Stack.Screen name="Notifications" component={Notifications} options={{ title: 'Notificações' }} />
