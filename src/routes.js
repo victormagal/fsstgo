@@ -13,7 +13,8 @@ const Stack = createStackNavigator();
 // import MyEvents from './pages/MyEvents';
 // import Login from './pages/Login';
 // import NewAccount from './pages/NewAccount';
-import ForgotPassword from './pages/ForgotPassword';
+// import ForgotPassword from './pages/ForgotPassword';
+import Code from './pages/Code';
 
 export default function Routes() {
   return (
@@ -34,7 +35,8 @@ export default function Routes() {
         }}
       /> */}
       {/* <Stack.Screen name="NewAccount" component={NewAccount} /> */}
-      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      {/* <Stack.Screen name="ForgotPassword" component={ForgotPassword} /> */}
+      <Stack.Screen name="Code" component={Code} />
     </Stack.Navigator>
   );
 }
