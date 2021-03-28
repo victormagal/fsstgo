@@ -14,7 +14,8 @@ const Stack = createStackNavigator();
 // import Login from './pages/Login';
 // import NewAccount from './pages/NewAccount';
 // import ForgotPassword from './pages/ForgotPassword';
-import Code from './pages/Code';
+// import Code from './pages/Code';
+import NewPassword from './pages/NewPassword';
 
 export default function Routes() {
   return (
@@ -36,7 +37,8 @@ export default function Routes() {
       /> */}
       {/* <Stack.Screen name="NewAccount" component={NewAccount} /> */}
       {/* <Stack.Screen name="ForgotPassword" component={ForgotPassword} /> */}
-      <Stack.Screen name="Code" component={Code} />
+      {/* <Stack.Screen name="Code" component={Code} /> */}
+      <Stack.Screen name="NewPassword" component={NewPassword} />
     </Stack.Navigator>
   );
 }
