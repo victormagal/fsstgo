@@ -1,4 +1,12 @@
 import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create ({
+    gradient: {
+        paddingVertical: 15,
+        paddingHorizontal: 20
+    }
+}); 
 
 export const BackgroundImage = styled.ImageBackground`
     display: flex;
@@ -24,11 +32,6 @@ export const CheckIn = styled.TouchableOpacity`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-`;
-
-export const Info = styled.View`
-    background-color: black;
-    padding: 15px 20px;
 `;
 
 export const Label = styled.Text`

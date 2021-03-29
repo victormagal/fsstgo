@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { BackgroundImage, Card, CheckIn, Info, Label, Price, PriceBox, Title } from './styles';
+import styles, { BackgroundImage, Card, CheckIn, Label, Price, PriceBox, Title } from './styles';
+
+import LinearGradient from 'react-native-linear-gradient';
 
 import CheckSVG from '../../assets/svg/check_in.svg';
 import TicketSVG from '../../assets/svg/ticket_events.svg';
@@ -21,13 +23,13 @@ export default function MyEventsComponent({cards, onPress}) {
                                 <CheckIn>
                                     <CheckSVG width={40} height={40} />
                                 </CheckIn>
-                                <Info>
+                                <LinearGradient colors={['rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 1)']} style={styles.gradient}>
                                     <Label>{item.label}</Label>
                                     <PriceBox>
                                         <TicketSVG width={20} height={20} />
                                         <Price>{item.price}</Price>
                                     </PriceBox>
-                                </Info>
+                                </LinearGradient>
                             </BackgroundImage>
                         </Card>
                     ))}
