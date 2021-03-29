@@ -20,26 +20,70 @@ const Stack = createStackNavigator();
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home'
-          screenOptions={({navigation}) => ({
-            header: () => <HeaderComponent navigation={navigation} />
-          })}
-        >
+        <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen
               name="Home"
               component={Home}
-              options={{
-                title: 'Inicial'
-              }}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Inicial' backButton={false} profilePage={false} />
+              })}
             />
-            <Stack.Screen name="Profile" component={Profile} options={{ title: 'Perfil' }} />
-            <Stack.Screen name="Faq" component={Faq} options={{ title: 'Perguntas Frequentes' }} />
-            <Stack.Screen name="Notifications" component={Notifications} options={{ title: 'Notificações' }} />
-            <Stack.Screen name="VideoClass" component={VideoClass} options={{ title: 'Video aulas' }} />
-            <Stack.Screen name="Events" component={Events} options={{ title: 'Eventos' }} />
-            <Stack.Screen name="Library" component={Library} options={{ title: 'Biblioteca' }} />
-            <Stack.Screen name="MyEvents" component={MyEvents} options={{ title: 'Meus eventos' }} />
-            <Stack.Screen name="Event" component={Event} options={{ title: 'Campus Party' }} />
+            <Stack.Screen
+              name="Profile"
+              component={Profile}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Perfil' backButton={false} profilePage={true} />
+              })}
+            />
+            <Stack.Screen
+              name="Faq"
+              component={Faq}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Perguntas Frequentes' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="Notifications"
+              component={Notifications}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Notificações' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="VideoClass"
+              component={VideoClass}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Video Aulas' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="Events"
+              component={Events}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Eventos' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="Library"
+              component={Library}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Biblioteca' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="MyEvents"
+              component={MyEvents}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Meus Eventos' backButton={true} profilePage={false} />
+              })}
+            />
+            <Stack.Screen
+              name="Event"
+              component={Event}
+              options={({navigation}) => ({
+                header: () => <HeaderComponent navigation={navigation} title='Evento' backButton={true} profilePage={false} />
+              })}
+            />
         </Stack.Navigator>
     );
 }

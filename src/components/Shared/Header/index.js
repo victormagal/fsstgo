@@ -2,18 +2,23 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import BackSVG from '../../../assets/svg/back_icon.svg';
+import CloseSVG from '../../../assets/svg/close_icon.svg';
 import ProfileSVG from '../../../assets/svg/profile_icon.svg';
 
-export default function HeaderComponent({navigation}) {    
+export default function HeaderComponent({navigation, title, backButton, profilePage}) {    
     return (
         <View style={styles.header}>
-            <TouchableOpacity>
-                <BackSVG width={20} height={20} onPress={() => navigation.goBack()} />
-            </TouchableOpacity>
-            <Text style={styles.title}>Olá enfermeira</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                <ProfileSVG width={25} height={25} />
-            </TouchableOpacity>
+            {
+                backButton
+                ? <TouchableOpacity><BackSVG width={20} height={20} onPress={() => navigation.goBack()} /></TouchableOpacity>
+                : <View style={styles.emptyBox}></View>
+            }
+            <Text style={styles.title}>{title}</Text>
+            {
+                profilePage
+                ? <TouchableOpacity onPress={() => navigation.goBack()}><CloseSVG width={17} height={17} /></TouchableOpacity>
+                : <TouchableOpacity onPress={() => navigation.navigate('Profile')}><ProfileSVG width={25} height={25} /></TouchableOpacity>
+            }
         </View>
     );
 }
@@ -28,6 +33,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingBottom: 16,
         paddingTop: 40
+    },
+    emptyBox: {
+        width: 20,
+        height: 20
     },
     title: {
         fontFamily: 'WorkSans-Bold',
