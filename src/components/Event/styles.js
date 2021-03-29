@@ -63,12 +63,11 @@ export const HeaderSection = styled.View`
 `;
 
 export const IconHeader = styled.TouchableOpacity`
-    border-width: 1px;
-    border-color: #efefef;
+    background-color: white;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    padding: 0 5px;
+    padding: 0 8px;
 `;
 
 export const TitleBody = styled.Text`
@@ -113,14 +112,15 @@ export const ReadMoreText = styled.Text`
 export const List = styled.FlatList`
     margin-left: -16px;
     margin-right: -16px;
-    padding-left: 16px;
+    padding-left: 0;
 `;
 
 export const ImageGallery = styled.Image`
-    width: 300px;
-    height: 150px;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     border-radius: 10px;
-    margin-right: 16px;
 `;
 
 export const BoxFile = styled.TouchableOpacity`
@@ -128,11 +128,10 @@ export const BoxFile = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-width: 1px;
-    border-color: #efefef;
+    background-color: white;
+    margin: 5px 0 20px 16px;
     border-radius: 10px;
-    padding: 16px 25px 16px 20px;
-    margin-right: 16px;
+    padding: 16px 25px;
 `;
 
 export const TitleFile = styled.Text`

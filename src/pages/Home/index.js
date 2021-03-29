@@ -8,7 +8,7 @@ import BookSVG from '../../assets/svg/book_home.svg';
 import VideoSVG from '../../assets/svg/video_home.svg';
 import TicketSVG from '../../assets/svg/ticket_home.svg';
 
-export default function Home({ navigation }) {
+export default function Home({navigation}) {
     const content = [
         {
             backgroundColor: '#56b597',   

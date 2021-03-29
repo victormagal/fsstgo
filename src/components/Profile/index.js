@@ -1,64 +1,40 @@
 import React from 'react';
 import { Container, CustomButton, Email, Label, Logout, LogoutButton, Name, Notifications, Section, SectionName, TextNotifications, TipNotifications, Title, Version } from './styles';
 
-// SVG Icons used on this component
-import ArrowSVG from '../../assets/svg/keyboard_arrow.svg';
-
-export default function ProfileComonent() {
+export default function ProfileComonent({profiles, onPress}) {
     return(
-        <Container>
-            <SectionName>
-                <Name>Dwayne Johnson</Name>
-                <Email>therock@email.com</Email>
-            </SectionName>
-            <Section>
-                <Title>Minha conta</Title>
-                <CustomButton>
-                    <Label>Dados pessoais</Label>
-                    <ArrowSVG width={20} height={15} />
-                </CustomButton>
-                <CustomButton>
-                    <Label>Notificações</Label>
-                    <Notifications>
-                        <TipNotifications>
-                            <TextNotifications>200</TextNotifications>
-                        </TipNotifications>
-                        <ArrowSVG width={20} height={15} />
-                    </Notifications>
-                </CustomButton>
-            </Section>
-            <Section>
-                <Title>Configurações</Title>
-                <CustomButton>
-                    <Label>Trocar senha</Label>
-                    <ArrowSVG width={20} height={15} />
-                </CustomButton>
-            </Section>
-            <Section>
-                <Title>Suporte</Title>
-                <CustomButton>
-                    <Label>Dúvidas frequentes</Label>
-                    <ArrowSVG width={20} height={15} />
-                </CustomButton>
-            </Section>
-            <Section>
-                <Title>Sobre o aplicativo</Title>
-                <CustomButton>
-                    <Label>Versão</Label>
-                    <Version>0.123</Version>
-                </CustomButton>
-                <CustomButton>
-                    <Label>Privacidade</Label>
-                    <ArrowSVG width={20} height={15} />
-                </CustomButton>
-                <CustomButton>
-                    <Label>Termos de serviço</Label>
-                    <ArrowSVG width={20} height={15} />
-                </CustomButton>
-            </Section>
-            <LogoutButton>
-                <Logout>Sair da conta</Logout>
-            </LogoutButton>
-        </Container>
+        <>
+            {profiles.map((profile, index) => (
+                <Container key={index}>
+                    <SectionName>
+                        <Name>{profile.name}</Name>
+                        <Email>{profile.mail}</Email>
+                    </SectionName>
+                    {profile.sections.map((section, index) => (    
+                        <Section key={index}>
+                            <Title>{section.title}</Title>
+                            {section.buttons.map((button, index) => (
+                                <CustomButton key={index} onPress={() => onPress(button)}>
+                                    <Label>{button.label}</Label>
+                                    <Notifications>
+                                        {
+                                            button.notifications &&
+                                            <TipNotifications>
+                                                <TextNotifications>{button.notifications}</TextNotifications>
+                                            </TipNotifications>
+                                        }
+                                        {button.version && <Version>{button.version}</Version>}
+                                        {button.icon && button.icon}
+                                    </Notifications>
+                                </CustomButton>
+                            ))}
+                        </Section>
+                    ))}
+                    <LogoutButton>
+                        <Logout>Sair da conta</Logout>
+                    </LogoutButton>
+                </Container>
+            ))}
+        </>
     );
 }
