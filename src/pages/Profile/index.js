@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
+import { Logout, LogoutButton } from './styles';
 import ProfileComponent from '../../components/Profile';
 
 // SVG Icons used on this component
@@ -75,6 +76,9 @@ export default function Profile({navigation}) {
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
             <ProfileComponent profiles={content} onPress={goToPage} />
+            <LogoutButton onPress={() => navigation.navigate('Login')}>
+                <Logout>Sair da conta</Logout>
+            </LogoutButton>
         </ScrollView>
     );
 }

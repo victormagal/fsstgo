@@ -6,71 +6,80 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import Logo from '../../assets/svg/logo.svg';
 import styles from './styles';
 
-export default function Code() {
+export default function Code({navigation}) {
   return (
     <KeyboardAvoidingView style={styles.background}>
-      <View style={styles.containerLogo}>
-        <Logo />
-      </View>
-
-      <View style={styles.container}>
-        <Text style={styles.baseTitle}>Código</Text>
-        <Text style={styles.innerTitle}>
-          Insira o código de 6 digitos que vc recebeu
-        </Text>
-
-        <View style={styles.row}>
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.box}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
+      <ScrollView>
+        <View style={styles.containerLogo}>
+          <Logo width={250} />
         </View>
 
-        <TouchableOpacity style={styles.btnSubmit}>
-          <Text style={styles.submitText}>ENVIAR</Text>
-        </TouchableOpacity>
-
-        <View style={styles.txtMyCode}>
-          <TouchableOpacity style={styles.btnCode}>
+        <View style={styles.containerLeft}>
+          <Text style={styles.baseTitle}>Código</Text>
+          <Text style={styles.innerTitle}>
+            Insira o código de 6 digitos que vc recebeu
+          </Text>
+        </View>
+        <View style={styles.containerCode}>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+          <View style={styles.itemCode}>
+            <TextInput
+              style={styles.box}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+          </View>
+        </View>
+        <View style={styles.containerCenter}>
+          <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('NewPassword')}>
+            <Text style={styles.submitText}>ENVIAR</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.containerCenter}>
+          <TouchableOpacity>
             <Text style={styles.sendCode}>Reenviar código</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 }

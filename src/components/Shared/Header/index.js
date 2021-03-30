@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
+import styles from './styles';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -24,27 +25,3 @@ export default function HeaderComponent({navigation, title, backButton, profileP
         </LinearGradient>
     );
 }
-
-const styles = StyleSheet.create({
-    header: {
-        backgroundColor: 'red',
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 16,
-        paddingBottom: 16,
-        paddingTop: 40,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15
-    },
-    emptyBox: {
-        width: 20,
-        height: 20
-    },
-    title: {
-        fontFamily: 'WorkSans-Bold',
-        fontSize: 22,
-        color: 'white'
-    }
-});

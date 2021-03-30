@@ -1,6 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import Login from './pages/Login';
+import SignUp from './pages/NewAccount';
+import ForgotPassword from './pages/ForgotPassword';
+import VerificationCode from './pages/Code';
+import NewPassword from './pages/NewPassword';
+
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Faq from './pages/Faq';
@@ -12,12 +18,48 @@ import MyEvents from './pages/MyEvents';
 import Event from './pages/Event';
 
 import HeaderComponent from './components/Shared/Header';
+import HeaderLoginComponent from './components/Shared/HeaderLogin';
 
 const Stack = createStackNavigator();
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='Login'>
+            <Stack.Screen
+              name="Login"
+              component={Login}
+              options={({navigation}) => ({
+                header: () => <HeaderLoginComponent navigation={navigation} backButton={false} />
+              })}
+            />
+            <Stack.Screen
+              name="SignUp"
+              component={SignUp}
+              options={({navigation}) => ({
+                header: () => <HeaderLoginComponent navigation={navigation} backButton={true} />
+              })}
+            />
+            <Stack.Screen
+              name="ForgotPassword"
+              component={ForgotPassword}
+              options={({navigation}) => ({
+                header: () => <HeaderLoginComponent navigation={navigation} backButton={true} />
+              })}
+            />
+            <Stack.Screen
+              name="VerificationCode"
+              component={VerificationCode}
+              options={({navigation}) => ({
+                header: () => <HeaderLoginComponent navigation={navigation} backButton={true} />
+              })}
+            />
+            <Stack.Screen
+              name="NewPassword"
+              component={NewPassword}
+              options={({navigation}) => ({
+                header: () => <HeaderLoginComponent navigation={navigation} backButton={true} />
+              })}
+            />
             <Stack.Screen
               name="Home"
               component={Home}
