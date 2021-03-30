@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, CustomButton, Email, Label, Logout, LogoutButton, Name, Notifications, Section, SectionName, TextNotifications, TipNotifications, Title, Version } from './styles';
 
-export default function ProfileComonent({profiles, onPress}) {
+export default function ProfileComonent({navigation, profiles, onPress}) {
     return(
         <>
             {profiles.map((profile, index) => (
@@ -30,9 +30,6 @@ export default function ProfileComonent({profiles, onPress}) {
                             ))}
                         </Section>
                     ))}
-                    <LogoutButton>
-                        <Logout>Sair da conta</Logout>
-                    </LogoutButton>
                 </Container>
             ))}
         </>
