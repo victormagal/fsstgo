@@ -1,9 +1,9 @@
 import React from 'react';
-import { BoxLabel, Card, Label } from './styles';
+import { BoxLabel, Card, Container, Label } from './styles';
 
 export default function HomeComponent({cards, onPress}) {
     return (
-        <>
+        <Container>
             {cards.map((card, index) => (
                 <Card key={index} bgColor={card.backgroundColor} onPress={() => onPress(card)} style={{
                     shadowColor: 'black',
@@ -21,6 +21,6 @@ export default function HomeComponent({cards, onPress}) {
                     {card.icon}
                 </Card>
             ))}
-        </>
+        </Container>
     );
 }

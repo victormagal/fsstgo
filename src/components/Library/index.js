@@ -1,9 +1,9 @@
 import React from 'react';
-import { Author, Box, Date, HeaderInfo, Info, Thumb, Title } from './styles';
+import { Author, Box, Container, Date, HeaderInfo, Info, Thumb, Title } from './styles';
 
 export default function LibraryComponent({ libraries }) {
     return (
-        <>
+        <Container>
             {libraries.map((library, index) => (
                 <Box key={index}>
                     <Thumb
@@ -20,6 +20,6 @@ export default function LibraryComponent({ libraries }) {
                     </Info>
                 </Box>
             ))}
-        </>
+        </Container>
     );
 }

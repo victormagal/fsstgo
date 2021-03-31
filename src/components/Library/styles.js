@@ -12,6 +12,10 @@ export const Box = styled.TouchableOpacity`
     margin-bottom: 24px;
 `;
 
+export const Container = styled.View`
+    padding: 32px 24px 6px;
+`;
+
 export const Date = styled.Text`
     font-family: 'WorkSans-SemiBold';
     font-size: 12px;

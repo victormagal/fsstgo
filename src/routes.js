@@ -19,6 +19,7 @@ import Event from './pages/Event';
 
 import HeaderComponent from './components/Shared/Header';
 import HeaderLoginComponent from './components/Shared/HeaderLogin';
+import HeaderProfileComponent from './components/Shared/HeaderProfile';
 
 const Stack = createStackNavigator();
 
@@ -71,7 +72,7 @@ export default function Routes() {
               name="Profile"
               component={Profile}
               options={({navigation}) => ({
-                header: () => <HeaderComponent navigation={navigation} title='Perfil' backButton={false} profilePage={true} />
+                header: () => <HeaderProfileComponent navigation={navigation} title='Perfil' />
               })}
             />
             <Stack.Screen

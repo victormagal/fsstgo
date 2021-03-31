@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
-import FaqComponent from '../../components/Faq';
+import { BoxContactUs, Label, Link } from './styles';
 import Accordeon from '../../components/Shared/Accordeon';
 
 export default function Faq() {
@@ -26,7 +26,10 @@ export default function Faq() {
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
             <Accordeon notes={notes} />    
-            <FaqComponent />
+            <BoxContactUs>
+                <Label>Não achou o que precisa?</Label>
+                <Link>Entre em contato</Link>
+            </BoxContactUs>
         </ScrollView>
     );
 }

@@ -13,4 +13,5 @@ export const LogoutButton = styled.TouchableOpacity`
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
+    background-color: white;
 `;

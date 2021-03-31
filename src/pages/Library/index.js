@@ -42,7 +42,7 @@ export default function LibraryPage() {
     ];
 
     return (
-        <ScrollView style={{ backgroundColor: 'white', paddingHorizontal: 16 }}>
+        <ScrollView>
             <LibraryComponent libraries={data} />
         </ScrollView>
     );

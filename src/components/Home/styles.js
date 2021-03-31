@@ -12,8 +12,12 @@ export const Card = styled.TouchableOpacity`
     justify-content: space-between;
     background-color: ${props => `${props.bgColor}`};
     border-radius: 10px;
-    margin: 0px 16px 16px;
+    margin: 0px 0 24px;
     padding: 20px 32px;
+`;
+
+export const Container = styled.View`
+    padding: 32px 24px;
 `;
 
 // Text style for the label of the button

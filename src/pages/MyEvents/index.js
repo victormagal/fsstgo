@@ -10,33 +10,30 @@ export default function MyEvents({navigation}) {
                 {
                     label: 'Primeiro evento de abril',
                     price: 'Gratuito',
-                    page: 'Event'
+                    page: 'Event',
                 },
                 {
                     label: 'Segundo evento de abril',
                     price: 'Gratuito',
-                    page: 'Event'
-                }
+                    page: 'Event',
+                },
             ]
-        }
-    ];
-
-    const closed = [
+        },
         {
             title: 'Passados',
             itens: [
                 {
                     label: 'Evento finalizado número 1',
                     price: 'Gratuito',
-                    page: 'Event'
+                    page: 'Event',
                 },
                 {
                     label: 'Evento finalizado número 2',
                     price: 'Gratuito',
-                    page: 'Event'
-                }
+                    page: 'Event',
+                },
             ]
-        }
+        },
     ];
 
     const goToPage = (target) => {
@@ -44,9 +41,8 @@ export default function MyEvents({navigation}) {
     }
 
     return (
-        <ScrollView style={{ backgroundColor: 'white', paddingHorizontal: 16 }}>
+        <ScrollView>
             <MyEventsComponent cards={subscribed} onPress={goToPage} />
-            <MyEventsComponent cards={closed} onPress={goToPage} />
         </ScrollView>
     );
 }

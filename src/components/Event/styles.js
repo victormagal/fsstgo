@@ -1,11 +1,24 @@
 import styled from 'styled-components/native';
 
+export const ImageEventBox = styled.View`
+    height: 250px;
+`;
+
+export const ImageEvent = styled.Image`
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 150px;
+`;
+
 // Summary of the event
 export const Summary = styled.View`
     background-color: #233568;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     padding: 24px 16px 48px;
+    margin-top: -24px;
 `;
 
 export const SummaryTitle = styled.Text`

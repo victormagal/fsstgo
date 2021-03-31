@@ -1,8 +1,32 @@
 import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+    gradient: {
+        height: 100,
+    },
+});
+
+export const SectionImage = styled.View`
+    margin: -75px 0 20px;
+    align-items: center;
+`;
+
+export const ImageProfile = styled.Image`
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+`;
 
 // Container that wrappes all elements in the component
-export const Container = styled.View`
-    padding: 0 15px;
+export const Container = styled.View``;
+
+// Container that wrappes all infos of the user in the component
+export const Data = styled.View`
+    padding: 0 24px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 `;
 
 // Button inside each section will send customer to another page

@@ -9,8 +9,6 @@ export default StyleSheet.create({
         paddingHorizontal: 16,
         paddingBottom: 16,
         paddingTop: 40,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
     },
     emptyBox: {
         width: 20,

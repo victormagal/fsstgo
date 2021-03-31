@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import styles, { BackgroundImage, Card, CheckIn, Label, Price, PriceBox, Title } from './styles';
+import styles, { BackgroundImage, Card, CheckIn, Container, Label, Price, PriceBox, Title } from './styles';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -9,9 +9,9 @@ import TicketSVG from '../../assets/svg/ticket_events.svg';
 
 export default function MyEventsComponent({cards, onPress}) {
     return (
-        <>
+        <Container>
             {cards.map((card, index) => (
-                <View style={{ marginBottom: 32 }} key={index}>
+                <View key={index}>
                     <Title>{card.title}</Title>
                     {card.itens.map((item, index) => (
                         <Card key={index} onPress={() => onPress(item)}>
@@ -35,6 +35,6 @@ export default function MyEventsComponent({cards, onPress}) {
                     ))}
                 </View>
             ))}
-        </>
+        </Container>
     );
 }

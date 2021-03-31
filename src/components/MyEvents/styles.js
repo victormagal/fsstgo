@@ -25,13 +25,17 @@ export const Card = styled.TouchableOpacity`
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: 0;
-    margin-top: 24px;
+    margin-bottom: 24px;
 `;
 
 export const CheckIn = styled.TouchableOpacity`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+`;
+
+export const Container = styled.View`
+    padding: 24px 24px 8px;
 `;
 
 export const Label = styled.Text`
@@ -58,4 +62,5 @@ export const Title = styled.Text`
     font-family: 'WorkSans-Bold';
     font-size: 32px;
     color: #233568;
+    margin-bottom: 8px;
 `;

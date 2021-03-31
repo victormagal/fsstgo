@@ -47,7 +47,7 @@ export default function EventsPage({ navigation }) {
     }
 
     return (
-        <ScrollView style={{ backgroundColor: 'white', paddingHorizontal: 16 }}>
+        <ScrollView>
             <EventsComponent events={content} onPress={goToPage} />
         </ScrollView>
     );

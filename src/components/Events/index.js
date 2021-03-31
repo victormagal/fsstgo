@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, BoxDescription, BoxPrice, Location, Price, Thumb, Title } from './styles';
+import { Box, BoxDescription, BoxPrice, Container, Location, Price, Thumb, Title } from './styles';
 import { View } from 'react-native';
 
 import TicketSVG from '../../assets/svg/ticket_events.svg';
 
 export default function EventsComponent({events, onPress}) {
     return (
-        <>
+        <Container>
             {events.map((event, index) => (
                 <Box key={index} onPress={() => onPress(event)}>
                     <View style={{
@@ -36,6 +36,6 @@ export default function EventsComponent({events, onPress}) {
                     </BoxDescription>
                 </Box>
             ))}
-        </>
+        </Container>
     );
 }

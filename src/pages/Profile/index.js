@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Logout, LogoutButton } from './styles';
 import ProfileComponent from '../../components/Profile';
+import LinearGradient from 'react-native-linear-gradient';
 
 // SVG Icons used on this component
 import ArrowSVG from '../../assets/svg/keyboard_arrow.svg';
@@ -9,8 +10,8 @@ import ArrowSVG from '../../assets/svg/keyboard_arrow.svg';
 export default function Profile({navigation}) {
     const content = [
         {
-            name: 'Ramon Ornelas',
-            mail: 'ramon@ammora.email',
+            name: 'Dwayne Johnson',
+            mail: 'therock@email.com',
             sections: [
                 {
                     title: 'Minha conta',
@@ -74,11 +75,13 @@ export default function Profile({navigation}) {
     }
 
     return (
-        <ScrollView style={{ backgroundColor: 'white' }}>
-            <ProfileComponent profiles={content} onPress={goToPage} />
-            <LogoutButton onPress={() => navigation.navigate('Login')}>
-                <Logout>Sair da conta</Logout>
-            </LogoutButton>
+        <ScrollView>
+            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#226A98', '#51AF97']}>
+                <ProfileComponent profiles={content} onPress={goToPage} />
+                <LogoutButton onPress={() => navigation.navigate('Login')}>
+                    <Logout>Sair da conta</Logout>
+                </LogoutButton>
+            </LinearGradient>
         </ScrollView>
     );
 }

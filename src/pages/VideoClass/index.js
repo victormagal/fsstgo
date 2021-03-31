@@ -31,7 +31,7 @@ export default function VideoClass() {
     ];
 
     return (
-        <ScrollView style={{ backgroundColor: 'white' }}>
+        <ScrollView>
             <VideoClassComponent videoclasses={data} />
         </ScrollView>
     );

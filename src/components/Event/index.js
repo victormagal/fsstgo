@@ -1,10 +1,10 @@
 import React from 'react';
-import { Body, Section, HeaderSection, IconHeader, TitleBody, MiddleSection, SubtitleBody, TextBody, ReadMoreBox, ReadMoreText, List, ImageGallery, BoxFile, TitleFile, MapImage, BoxSpeaker, ImageSpeaker, InfoSpeaker, NameSpeaker, RuleSpeaker, ApplySection, ApplyBox, ApplyText, ApplyButton, TextApplyButton, Summary, SummaryTitle, InfosSummary, TextInfosSummary, SummarySubtitle, SummaryLabel } from './styles';
-import { View } from 'react-native';
+import { ImageEventBox, ImageEvent, Body, Section, HeaderSection, IconHeader, TitleBody, MiddleSection, SubtitleBody, TextBody, ReadMoreBox, ReadMoreText, List, ImageGallery, BoxFile, TitleFile, MapImage, BoxSpeaker, ImageSpeaker, InfoSpeaker, NameSpeaker, RuleSpeaker, ApplySection, ApplyBox, ApplyText, ApplyButton, TextApplyButton, Summary, SummaryTitle, InfosSummary, TextInfosSummary, SummarySubtitle, SummaryLabel } from './styles';
+import { Image, View } from 'react-native';
 
 import DateSVG from '../../assets/svg/date_events.svg';
 import LocationSVG from '../../assets/svg/location_events.svg';
-import TicketSVG from '../../assets/svg/ticket_events.svg';
+import TicketSVG from '../../assets/svg/ticket_event.svg';
 import NotificationSVG from '../../assets/svg/notification_events.svg';
 import DownloadSVG from '../../assets/svg/download_file_event.svg';
 
@@ -49,6 +49,9 @@ export default function EventComponent() {
 
     return (
         <>
+            <ImageEventBox>
+                <ImageEvent source={{uri: 'https://i.picsum.photos/id/539/1000/500.jpg?hmac=lLNUs9dmAgZftrLmZENAkugvodZKOmMlXtTFIhLlpIg'}} />
+            </ImageEventBox>
             <Summary>
                 <SummaryTitle>Olá enfermeira</SummaryTitle>
                 <InfosSummary>
@@ -81,7 +84,7 @@ export default function EventComponent() {
                         <ReadMoreText>Leia mais</ReadMoreText>
                     </ReadMoreBox>
                 </Section>
-                <Section>
+                {/* <Section>
                     <HeaderSection>
                         <TitleBody>Atualizações</TitleBody>
                         <IconHeader style={{
@@ -104,7 +107,7 @@ export default function EventComponent() {
                     <ReadMoreBox>
                         <ReadMoreText>Leia mais</ReadMoreText>
                     </ReadMoreBox>
-                </Section>
+                </Section> */}
                 <Section>
                     <HeaderSection>
                         <TitleBody>Galeria</TitleBody>
@@ -142,9 +145,9 @@ export default function EventComponent() {
                             }}
                         />
                     </MiddleSection>
-                    <ReadMoreBox>
+                    {/* <ReadMoreBox>
                         <ReadMoreText>Leia mais</ReadMoreText>
-                    </ReadMoreBox>
+                    </ReadMoreBox> */}
                 </Section>
                 <Section>
                     <HeaderSection>
@@ -175,9 +178,9 @@ export default function EventComponent() {
                             }}
                         />
                     </MiddleSection>
-                    <ReadMoreBox>
+                    {/* <ReadMoreBox>
                         <ReadMoreText>Leia mais</ReadMoreText>
-                    </ReadMoreBox>
+                    </ReadMoreBox> */}
                 </Section>
                 <Section>
                     <HeaderSection>

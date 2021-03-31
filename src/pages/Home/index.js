@@ -41,7 +41,7 @@ export default function Home({navigation}) {
     }
 
     return (
-        <ScrollView style={{ backgroundColor: 'white', marginTop: 20 }}>
+        <ScrollView>
             <HomeComponent cards={content} onPress={goToPage} />   
         </ScrollView>
     );

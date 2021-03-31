@@ -22,6 +22,10 @@ export const BoxPrice = styled.View`
     flex-direction: row;
 `;
 
+export const Container = styled.View`
+    padding: 32px 24px 6px;
+`;
+
 export const Location = styled.Text`
     font-family: 'WorkSans-SemiBold';
     font-size: 12px;

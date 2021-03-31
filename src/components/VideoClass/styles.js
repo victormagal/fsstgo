@@ -3,7 +3,11 @@ import styled from 'styled-components/native';
 // Container that wraps all elements of the component
 export const Box = styled.View`
     background-color: #f1f1f1;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+`;
+
+export const Container = styled.View`
+    padding: 32px 0 6px;
 `;
 
 // Text style for the description of the video class
@@ -21,19 +25,21 @@ export const DownloadBox = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 16px 0;
 `;
 
 // Container that wraps all elements of the header
-export const HeaderBox = styled.View`
+export const HeaderBox = styled.TouchableOpacity`
     display: flex;
     flex-direction: row;
 `;
 
 // Container of the thumb image of the video class
-export const Thumb = styled.Image`
+export const Thumb = styled.ImageBackground`
     width: 150px;
     height: 100px;
+    justify-content: center;
+    align-items: center;
 `;
 
 // Container that wraps the title and description of the video class
@@ -45,6 +51,7 @@ export const Summary = styled.View`
     flex-basis: 0;
     justify-content: center;
     padding: 0 10px;
+    background-color: #fcfcfc;
 `;
 
 // Text style of the title
